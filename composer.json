@@ -1,0 +1,18 @@
+{
+    "name": "team-reflex/socialite-battlenet",
+    "description": "BattleNet OAuth2 Provider for Laravel Socialite",
+    "license": "MIT",
+    "authors": [{
+        "name": "Kyle Ward",
+        "email": "kairu@team-reflex.com"
+    }],
+    "require": {
+        "php": ">=5.5.9",
+        "socialiteproviders/manager": "^1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Reflex\\SocialiteProviders\\BattleNet\\": "src/"
+        }
+    }
+}

@@ -21,7 +21,7 @@ class Provider extends AbstractProvider implements ProviderInterface
 
     /**
      * Region to use when querying BattleNet.
-     * 
+     *
      * @var string
      */
     protected $region = 'us';
@@ -39,7 +39,7 @@ class Provider extends AbstractProvider implements ProviderInterface
     /**
      * {@inheritdoc}
      */
-    protected $scopeSeparator = ' ';
+    protected $scopeSeparator = '';
 
     /**
      * {@inheritdoc}
@@ -93,5 +93,14 @@ class Provider extends AbstractProvider implements ProviderInterface
         return array_merge(parent::getTokenFields($code), [
             'grant_type' => 'authorization_code'
         ]);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function scopes(array $scopes)
+    {
+        $this->scopes = array_unique(array_filter(array_merge($this->scopes, $scopes)));
+        return $this;
     }
 }

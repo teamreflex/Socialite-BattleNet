@@ -98,7 +98,7 @@ class Provider extends AbstractProvider implements ProviderInterface
     /**
      * {@inheritdoc}
      */
-    public function scopes(array $scopes)
+    public function scopes($scopes)
     {
         $this->scopes = array_unique(array_filter(array_merge($this->scopes, $scopes)));
         return $this;

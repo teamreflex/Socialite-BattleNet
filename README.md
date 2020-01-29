@@ -1,6 +1,8 @@
 # Socialite-BattleNet
 BattleNet provider for Laravel Socialite/Socialite Providers.
 
+**Deprecated:** [Socialite Providers](https://socialiteproviders.netlify.com/providers/battle-net.html) has had a BattleNet provider for a while now. This package was made before it existed, and is no longer necessary.
+
 ## Install
 
 Composer:
